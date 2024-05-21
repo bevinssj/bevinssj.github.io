@@ -82,9 +82,26 @@
 	</p>
 	<p>
 	<script type="text/tikz">
-		\begin{tikzpicture}
-		  \draw (0,0) circle (1in);
-		\end{tikzpicture}
+		\begin{tikzpicture}[scale = 1.2]
+    \draw  node[fill,circle,scale=0.4] (1) at (1,7) [label = below:$v_1$] {1};%
+    \draw  node[fill,circle,scale=0.4] (3) at (1,5) [label = above: $v_3$] {3};%
+    \draw  node[fill,circle,scale=0.4] (2) at (3,6) [label =left:$v_2$] {2};%
+    \draw  node[fill,circle,scale=0.4] (4) at (5,6) [label = $v_4$] {4};%
+    \draw  node[fill,circle,scale=0.4] (5) at (7,6) [label = right:$v_5$] {5};%
+    \draw  node[fill,circle,scale=0.4] (6) at (9,7) [label = below:$v_6$] {6};%
+    \draw  node[fill,circle,scale=0.4] (7) at (9,5) [label = $v_7$] {7};%
+    \draw [line width=0.04cm] (1) -- (2);
+    \draw [line width=0.04cm] (2) -- (3);
+    \draw [line width=0.04cm] (2) -- (4) -- (5);
+    \draw [line width=0.04cm] (5) -- (6);
+    \draw [line width=0.04cm] (5) -- (7);
+    \draw [dotted, line width=0.04cm] (1.75,6) ellipse (1.5cm and 1.5cm);
+    \draw [dotted, line width=0.04cm] (8.25,6) ellipse (1.5cm and 1.5cm);
+    \node at (1.75,4.2) {$\xi(\omega_1)$};
+    \node at (8.25,4.2) {$\xi(\omega_2)$};
+    \draw [line width = 0.03cm, decorate, decoration={brace, amplitude=10pt, raise=0.3cm, mirror}]
+        (2.north) -- (5.north) node [pos=0.5, below=16pt] {$d_G(\xi(\omega_1),\xi(\omega_2)) = 2$};
+    \end{tikzpicture}
 	  </script>
 	  </p>
 
